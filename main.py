@@ -31,7 +31,7 @@ def show_a_character(Id):
         })
         
 
-@app.route('/api/new_character/<str:token>', methods = ['POST'])
+@app.route('/api/new_character/<string:token>', methods = ['POST'])
 def add_new_character(token):
 
     if token == password:
