@@ -35,15 +35,14 @@ def show_a_character(Id):
 def add_new_character(token):
 
     if token == password:
-        if len(request.json) == 7:
+        if len(request.json) == 6:
             db.db.Personajes.insert_one({
                 "Id":request.json["Id"],
                 "Nombre":request.json["Nombre"],
                 "Edad":request.json["Edad"],
                 "Sexo":request.json["Sexo"],
                 "Ocupacion":request.json["Ocupación"],
-                "Img":request.json["Img"],
-                "Url":request.json["Url"]
+                "Img":request.json["Img"]
             })
         else:
             return jsonify({
@@ -73,8 +72,7 @@ def update_char(Id, token):
                 "Edad":request.json["Edad"],
                 "Sexo":request.json["Sexo"],
                 "Ocupacion":request.json["Ocupación"],
-                "Img":request.json["Img"],
-                "Url":request.json["Url"]
+                "Img":request.json["Img"]
             }})
         else:
             return jsonify({'status':400, "message": f"Character # {Id} not found"})
