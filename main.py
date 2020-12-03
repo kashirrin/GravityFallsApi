@@ -35,7 +35,7 @@ def show_a_character(Id):
 def add_new_character(token):
 
     if token == password:
-        if len(request.json) == 5:
+        if len(request.json) == 6:
             db.db.Personajes.insert_one({
                 "Id":request.json["Id"],
                 "Nombre":request.json["Nombre"],
