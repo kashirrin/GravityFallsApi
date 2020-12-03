@@ -39,6 +39,7 @@ def add_new_character(token):
             db.db.Personajes.insert_one({
                 "Id":request.json["Id"],
                 "Nombre":request.json["Nombre"],
+                "Edad":request.json["Edad"],
                 "Sexo":request.json["Sexo"],
                 "Ocupación":request.json["Ocupación"],
                 "Img":request.json["Img"]
@@ -68,6 +69,7 @@ def update_char(Id, token):
             {'$set':{
                 "Id":request.json["Id"],
                 "Nombre":request.json["Nombre"],
+                "Edad":request.json["Edad"],
                 "Sexo":request.json["Sexo"],
                 "Ocupación":request.json["Ocupación"],
                 "Img":request.json["Img"]
