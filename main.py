@@ -61,7 +61,7 @@ def add_new_character(token):
         })
 
 
-@app.route('/api/character/update/<int:Id>/<string:token>/', methods=['PUT'])
+@app.route('/api/character/update/<int:Id>/<string:token>', methods=['PUT'])
 def update_char(Id, token):
     if token == password:
         if db.db.Personajes.find_one({'Id':Id}):
@@ -84,7 +84,7 @@ def update_char(Id, token):
             "message":"Incorrect password"
         })
 
-@app.route('/api/character/delete/<int:Id>/<string:token>/', methods=['DELETE'])
+@app.route('/api/character/delete/<int:Id>/<string:token>', methods=['DELETE'])
 def delete_char(Id, token):
     if token == password:
         if db.db.Personajes.find_one({'Id':Id}):
