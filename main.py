@@ -41,7 +41,7 @@ def add_new_character(token):
                 "Nombre":request.json["Nombre"],
                 "Edad":request.json["Edad"],
                 "Sexo":request.json["Sexo"],
-                "Ocupación":request.json["Ocupación"],
+                "Ocupacion":request.json["Ocupacion"],
                 "Img":request.json["Img"]
             })
         else:
@@ -71,7 +71,7 @@ def update_char(Id, token):
                 "Nombre":request.json["Nombre"],
                 "Edad":request.json["Edad"],
                 "Sexo":request.json["Sexo"],
-                "Ocupación":request.json["Ocupación"],
+                "Ocupacion":request.json["Ocupacion"],
                 "Img":request.json["Img"]
             }})
         else:
