@@ -41,8 +41,9 @@ def add_new_character(token):
                 "Nombre":request.json["Nombre"],
                 "Edad":request.json["Edad"],
                 "Sexo":request.json["Sexo"],
-                "Ocupacion":request.json["Ocupacion"],
-                "Img":request.json["Img"]
+                "Ocupacion":request.json["Ocupación"],
+                "Img":request.json["Img"],
+                "Url":request.json["Url"]
             })
         else:
             return jsonify({
@@ -71,8 +72,9 @@ def update_char(Id, token):
                 "Nombre":request.json["Nombre"],
                 "Edad":request.json["Edad"],
                 "Sexo":request.json["Sexo"],
-                "Ocupacion":request.json["Ocupacion"],
-                "Img":request.json["Img"]
+                "Ocupacion":request.json["Ocupación"],
+                "Img":request.json["Img"],
+                "Url":request.json["Url"]
             }})
         else:
             return jsonify({'status':400, "message": f"Character # {Id} not found"})
